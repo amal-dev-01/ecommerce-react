@@ -37,6 +37,7 @@ console.log(data);
             placeholder="Enter your name"
             id='name'
             required
+            style={{ width: '30vw' }}
           />
           <Form.Label>Email</Form.Label>
           <Form.Control
@@ -44,7 +45,7 @@ console.log(data);
             placeholder="Enter your email"
             id='email'
             required
-            style={{ width: '500px' }}
+            style={{ width: '30vw' }}
           />
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -52,6 +53,7 @@ console.log(data);
             placeholder="Enter your Password"
             id='password'
             required
+            style={{ width: '30vw' }}
           />
           <Form.Control.Feedback type="invalid">
             Please provide your name.
@@ -62,7 +64,7 @@ console.log(data);
         <Button variant="primary" type="submit" style={{ marginRight: '10px' }}>
           Register
         </Button>
-        {/* <Button onClick={()=>nav('/Login')}>Login</Button> */}
+        <Button onClick={()=>nav('/')}>Home</Button>
 
 
       </form>

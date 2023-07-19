@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
-import {  useParams } from 'react-router-dom';
+import {  useParams ,useNavigate} from 'react-router-dom';
 import { Mycontext } from './Context';
 import { Button, Card } from 'react-bootstrap';
 import './Homestyle.css'
 
 
+
 const Showproduct = () => {
 
-// const navLogin=useNavigate()
+const nav=useNavigate()
 
   const { id } = useParams();
   // console.log(id);
@@ -31,10 +32,11 @@ if(login==true)
   if (PID.includes(id)) {
     alert('Product is already added');
   } else {
-    setCart((cart) => [...cart, { productId: id }]);
-    setCount(count+1)
+    setCart((cart) => [...cart, { productId: id }])&&setCount(count+1)
+    // setCount(count+1)
     alert('Sucessfully Added to cart')
     // console.log(cart);
+    
   }
 
 }
@@ -60,22 +62,22 @@ else{
       <div className='div-m-2'>
         <Card >
           <div className="d-flex">
-            <div className="w-70">
-            <Card.Img src={product.src} className="card-image1" />
+            <div style={{width:"60vh"}}>
+            <Card.Img src={product.src} className="card-image1"/>
             </div>
-            <div className="w-50 p-3">
+            <div className="w-50 p-3" style={{textAlign:"left"}}>
               <Card.Title><h2>{product.name}</h2> </Card.Title>
               <Card.Body>
               <Card.Text><h3>{product.brand}</h3></Card.Text>
-              <Card.Text><h3>{product.type}</h3></Card.Text>
-              <Card.Text><h4>{product.des}</h4></Card.Text>
+              <Card.Text><h4>{product.type}</h4></Card.Text>
+              <Card.Text><p>{product.des}</p></Card.Text>
               <Card.Text><h3>MRP: <del>{product.prize}</del></h3></Card.Text>
-              <Card.Text><h3>OfferPize: {product.offerPize}</h3></Card.Text>
+              <Card.Text><h3>OfferPice: {product.offerPize}</h3></Card.Text>
          
-              <div >
-              {/* <Button className='btn-class'>Buy Now</Button><br/> */}
+              <div>
                 <br/>
-              <Button className='btn-class' id={product.id} onClick={Addtocart}>Add To Card</Button>
+              <Button className='btn-class' id={product.id} onClick={Addtocart}>Add To Card</Button>{' '}
+              <Button className='btn-class'  onClick={()=>nav('/Carts')}>Go  To Card</Button>
             
               
               </div>

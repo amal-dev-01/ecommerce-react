@@ -1,15 +1,16 @@
 import React, { useContext } from 'react'
-import { Mycontext } from './Context'
+import { Mycontext } from './Componenet/Context'
 
-const Adminsport = () => {
-  const {addproduct}=useContext(Mycontext);
-  const Sports = addproduct.filter(
-    (product) => product.type.toLowerCase() === 'sports'
-  );
+const Adminsports = () => {
+
+    const{addproduct}=useContext(Mycontext)
+    const Sportsproduct = addproduct.filter(
+        (product) => product.type.toLowerCase() === 'sports'
+      );
+
   return (
-    <div>
-      <h2>Sports</h2>
-      <table>
+    <div><h2>Sports</h2>
+    <table>
         <tr>
             <th>Product Id</th>
             <th>Name</th>
@@ -20,7 +21,7 @@ const Adminsport = () => {
             <th>Price</th>
             <th>OfferPrice</th>
         </tr>
-        {Sports.map((x)=>
+        {Sportsproduct.map((x)=>
         <tr  key={x.id}>
         <td>{x.id}</td>
         <td>{x.name}</td>
@@ -35,9 +36,11 @@ const Adminsport = () => {
         </tr>
         )}
         </table>
-        
+    
+    
+    
     </div>
   )
 }
 
-export default Adminsport
+export default Adminsports

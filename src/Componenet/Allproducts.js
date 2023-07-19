@@ -1,65 +1,51 @@
-import { useContext } from 'react';
-import Button from 'react-bootstrap/Button';
-import { Col, Container, Row, Card } from "react-bootstrap";
-import { Mycontext } from './Context';
+import React, { useContext } from 'react'
+import { Mycontext } from './Context'
+import { Col, Container, Row, Card,Button, Navbar } from "react-bootstrap";
 import './Homestyle.css'
 import { useNavigate } from 'react-router-dom';
-import NavbarMain from './Navbar'
 
-function Men() {
-  const { addproduct,cart,setCart,count,setCount,data} = useContext(Mycontext);
-  const filteredProducts = addproduct.filter(
-    (product) => product.type.toLowerCase() === 'men'
-  );
-  const navPro=useNavigate()
-  const passid=(e)=>{
-    const id=e.target.id
-    navPro(`/Showproduct/${id}`)
-  }
-  const PID=cart.map((i)=>i.productId)
+const Allproducts = () => {
+    const {addproduct,cart,setCart,data,setCount,count,}=useContext(Mycontext)
+    const navPro=useNavigate()
+    const passid=(e)=>{
+        const id=e.target.id
+        // console.log(id);
+        navPro(`/Showproduct/${id}`)
+      }
+
+      const PID=cart.map((i)=>i.productId)
   const login = data.map((item) => item.email);
 
 
-  const Addtocart=(e)=>{
-    const id=e.target.id
-    console.log(login);
-// console.log("length:",login.length);
-if(login.length>0)
-{
-  if (PID.includes(id)) {
-    alert('Product is already added');
-  } else {
-    setCart((cart) => [...cart, { productId: id }]);
-    setCount(count+1)
-    alert('Sucessfully Added to cart')
-    // console.log(cart);
-  }
-
-}
-else{
-  alert("plz Login")
-}
+      const Addtocart=(e)=>{
+        const id=e.target.id
+        console.log(login);
+    // console.log("length:",login.length);
+    if(login.length>0)
+    {
+      if (PID.includes(id)) {
+        alert('Product is already added');
+      } else {
+        setCart((cart) => [...cart, { productId: id }]);
+        setCount(count+1)
+        alert('Sucessfully Added to cart')
+        // console.log(cart);
+      }
     
-
-   
-   
-  };
-
- 
-  
-
+    }
+    else{
+      alert("plz Login")
+    }
+       
+      };
   return (
-
     <div>
-    <NavbarMain />
-    <div>
-      <h3>Men's fashion</h3>
-    </div>
+<header><Navbar/></header>
     <Container fluid className="my-5"  >
       <Row xs={1} md={2} lg={4} className="g-4">
-        {filteredProducts.map((product) => (
+        {addproduct.map((product) => (
           <Col key={product.id} className="mb-4">
-            <Card>
+            <Card height={300}>
               <div className="d-flex justify-content-between p-3" >
                 {/* <p className="lead mb-0">Today's Combo Offer</p> */}
                 <div
@@ -74,6 +60,7 @@ else{
                 variant="top"
                 alt="shoe"
                 id={product.id}
+                height={300}
                 onClick={passid}
               />
               <Card.Body>
@@ -107,8 +94,7 @@ else{
     </Container>
   </div>
   
- 
   )
 }
 
-export default Men;
+export default Allproducts

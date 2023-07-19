@@ -6,7 +6,11 @@ import './Homestyle.css'
 
 const Admin = () => {
     const navProduct=useNavigate()
-    const{data}=useContext(Mycontext)
+    const{data,setLogin}=useContext(Mycontext)
+    const logout=()=>{
+      setLogin(false)
+      navProduct("/")
+    }
   return (
     <div>
 <h2>Admin Page</h2>
@@ -22,24 +26,12 @@ const Admin = () => {
       <Dropdown.Menu>
         <Dropdown.Item  onClick={()=>navProduct('/Adminmen')} >Men</Dropdown.Item>
         <Dropdown.Item  onClick={()=>navProduct('/Adminwomen')}>Women</Dropdown.Item>
-        <Dropdown.Item  onClick={()=>navProduct('/Adminsport')}>Sport</Dropdown.Item>
+        <Dropdown.Item  onClick={()=>navProduct('/Adminsport')}>Sports</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
+   <button onClick={logout}>LogOut</button>
   </div>
   <div style={{ width: '80%' }}>
-    {/* <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                     <h3 style={{padding:"20px"}}>User Details</h3>
-      <tr style={{ backgroundColor: "#f2f2f2" }}>
-        <th style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>Name</th>
-        <th style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>Email</th>
-      </tr>
-      {data.map((x) =>
-        <tr key={x.fname}>
-          <td style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>{x.fname}</td>
-          <td style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>{x.email}</td>
-        </tr>
-      )}
-    </table> */}
    <Outlet/> 
   </div>
 </div>

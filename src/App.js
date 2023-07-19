@@ -19,6 +19,10 @@ import Addproduct from './Componenet/Addproduct';
 import Editproduct from './Componenet/Editproduct';
 import Adminmen from './Componenet/Adminmen';
 import Userdetail from './Componenet/Userdetail';
+import Adminwomen from './Componenet/Adminwomen';
+import Sports from './Componenet/Sports'
+import Allproducts from './Componenet/Allproducts';
+import Adminsport from './Componenet/Adminsport';
 
 
 function App() {
@@ -45,13 +49,17 @@ const [addproduct,setAddproduct]=useState(Product)
     <Route path="/Showproduct/:id" element={<Showproduct/>}/>
     <Route path='/Carts' element={<Carts/>}/>
     <Route path='/Buynow/:total' element={<Buy/>}/>
-    <Route path='/Admin' element={<Admin/>}/>
+    <Route path='/Sports' element={<Sports/>}/>
+    <Route path='Allproducts' element={<Allproducts/>}/>
+    <Route path='/Admin' element={login==true  ?<Admin/>:<Login/>}/>
 
     <Route element={<Admin/>}>
     <Route path='/Viewproduct' element={<Viewproduct/>}/>
     <Route path='/Addproduct' element={<Addproduct/>}/>
     <Route path='/Edit/:id' element={<Editproduct/>}/>
     <Route path='/Adminmen' element={<Adminmen/>}/>
+    <Route path='/Adminsport' element={<Adminsport/>}/>
+    <Route path='/Adminwomen' element={<Adminwomen/>}/>
     <Route path='/Userdetail' element={<Userdetail/>}/>
     </Route>
     

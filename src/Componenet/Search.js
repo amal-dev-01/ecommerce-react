@@ -16,7 +16,8 @@ const navSearch=useNavigate()
 
   const filteredProducts = addproduct.filter((item) =>
   item.name.toLowerCase().includes(search.toLowerCase())||
-  item.brand.toLowerCase().includes(search.toLowerCase())
+  item.brand.toLowerCase().includes(search.toLowerCase()) ||
+  item.type.toLowerCase().includes(search.toLowerCase())
   );
 
   return (

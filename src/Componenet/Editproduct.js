@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { Mycontext } from './Context'
-// import './Homestyle.css'
 import { Form, Button } from 'react-bootstrap';
 
 const Editproduct = () => {
@@ -49,7 +48,6 @@ const submit = (e) => {
        <div  style={{width:"50%" ,alignContent:"center",alignItems:"center"}}><img width={500} src={x.src}/></div>
        <div style={{width:"50%"}}>
        <h3>Product Details</h3>
-       {/* <p>{x.id}</p> */}
        <h1>{x.name}</h1>
        <h2>{x.brand}</h2>
        <h2>{x.prize}</h2>

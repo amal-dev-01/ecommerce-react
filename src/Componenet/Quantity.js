@@ -24,16 +24,17 @@ const Quantity = (props) => {
 }
 
 const usebuy=useNavigate()
-const buyNow=(total,Name)=>{
+const buyNow=(total)=>{
     // console.log(Name);
-    usebuy(`/Buynow/${total,Name}`)
+    usebuy(`/Buynow/${total}`)
     
 
 }
 
   return (
     <div>
-<Button variant="primary" onClick={increment}>+</Button>{quan}
+<Button variant="primary" onClick={increment}>+</Button>{" "}{" "}
+{quan}{' '}{" "}
 <Button variant="primary" onClick={decrement}>-</Button><br/>
 <p>{(props.obj.offerPize)*(props.obj.qty)}</p>
 

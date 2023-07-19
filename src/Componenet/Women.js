@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
 import { Col, Container, Row, Card } from "react-bootstrap";
 import { Mycontext } from './Context';
 import './Homestyle.css'
@@ -41,7 +40,7 @@ if(login.length>0)
 }
 else{
   alert("plz Login")
-  navPro('/Registration')
+  // navPro('/Registration')
 }
     
 
@@ -76,7 +75,7 @@ else{
               <Card.Img
                 src={product.src}
                 variant="top"
-                alt="Laptop"
+                alt="shoe"
                 id={product.id}
                 onClick={passid}
               />

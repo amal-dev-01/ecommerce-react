@@ -1,19 +1,21 @@
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
+// import Card from 'react-bootstrap/Card';
 import { Col, Container, Row, Card } from "react-bootstrap";
 import { Mycontext } from './Context';
 import './Homestyle.css'
 import { useNavigate } from 'react-router-dom';
 import NavbarMain from './Navbar'
 
-function Men() {
+function Sports() {
   const { addproduct,cart,setCart,count,setCount,data} = useContext(Mycontext);
   const filteredProducts = addproduct.filter(
-    (product) => product.type.toLowerCase() === 'men'
+    (product) => product.type.toLowerCase() === 'sports'
   );
   const navPro=useNavigate()
   const passid=(e)=>{
     const id=e.target.id
+    // console.log(id);
     navPro(`/Showproduct/${id}`)
   }
   const PID=cart.map((i)=>i.productId)
@@ -38,6 +40,7 @@ if(login.length>0)
 }
 else{
   alert("plz Login")
+//   navPro('/Registration')
 }
     
 
@@ -53,13 +56,13 @@ else{
     <div>
     <NavbarMain />
     <div>
-      <h3>Men's fashion</h3>
+      <h3>Sports</h3>
     </div>
     <Container fluid className="my-5"  >
       <Row xs={1} md={2} lg={4} className="g-4">
         {filteredProducts.map((product) => (
           <Col key={product.id} className="mb-4">
-            <Card>
+            <Card height={300}>
               <div className="d-flex justify-content-between p-3" >
                 {/* <p className="lead mb-0">Today's Combo Offer</p> */}
                 <div
@@ -74,6 +77,7 @@ else{
                 variant="top"
                 alt="shoe"
                 id={product.id}
+                height={300}
                 onClick={passid}
               />
               <Card.Body>
@@ -111,4 +115,4 @@ else{
   )
 }
 
-export default Men;
+export default Sports;

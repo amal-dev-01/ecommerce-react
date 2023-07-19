@@ -4,7 +4,9 @@ import { useParams } from 'react-router-dom'
 
 const Buy = () => {
 const {total}=useParams()
-console.log(total);
+// console.log(total);
+const Total=total
+// console.log(Total);
 
   return (
     <div><h2>Buy Now</h2>
@@ -204,10 +206,6 @@ console.log(total);
             <div className="card-body">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                  Products
-                  <span>{total}</span>
-                </li>
-                <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                   Shipping
                   <span>Gratis</span>
                 </li>
@@ -220,7 +218,7 @@ console.log(total);
                     </strong>
                   </div>
                   <span>
-                    <strong>$53.98</strong>
+                    <strong>{Total}</strong>
                   </span>
                 </li>
               </ul>
@@ -236,14 +234,3 @@ console.log(total);
 
 export default Buy
     
-
-
-
-
-
-
-//     </div>
-//   )
-// }
-
-// export default Buy
