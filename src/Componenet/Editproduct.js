@@ -45,7 +45,7 @@ const submit = (e) => {
        {editproduct.map((x)=>
        <div key={x.id}>
        <div className='container d-flex justify-content-center align-items-center vh-10 '>
-       <div  style={{width:"50%" ,alignContent:"center",alignItems:"center"}}><img width={500} src={x.src}/></div>
+       <div  style={{width:"50%" ,alignContent:"center",alignItems:"center"}}><img width={500} src={x.src} alt='shoe'/></div>
        <div style={{width:"50%"}}>
        <h3>Product Details</h3>
        <h1>{x.name}</h1>

@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <a href='' className='me-4 text-reset'>
+          {/* <a href='' className='me-4 text-reset'>
             <FaFacebook/>
           </a>
           <a href='' className='me-4 text-reset'>
@@ -24,7 +24,7 @@ const Footer = () => {
           </a>
           <a href='' className='me-4 text-reset'>
             <FaLinkedin/>
-          </a>
+          </a> */}
         </div>
       </section>
 
@@ -42,7 +42,7 @@ const Footer = () => {
 
             <Col md='2' lg='2' xl='2' className='mx-auto mb-4' style={{textDecorationLine:"none"}}>
               <h6 className='text-uppercase fw-bold mb-4'>Brands</h6>
-              <p>
+              {/* <p>
                 <a href='https://in.puma.com/in/en/mens/mens-shoes?offset=24' className='text-reset'>
                   Adidas
                 </a>
@@ -62,7 +62,7 @@ const Footer = () => {
                 <a href='https://in.puma.com/in/en/mens/mens-shoes?offset=24' className='text-reset'>
                 Reebok
                 </a>
-              </p>
+              </p> */}
             </Col>
 
             <Col md='3' lg='2' xl='2' className='mx-auto mb-4'>

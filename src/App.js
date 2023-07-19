@@ -51,7 +51,7 @@ const [addproduct,setAddproduct]=useState(Product)
     <Route path='/Buynow/:total' element={<Buy/>}/>
     <Route path='/Sports' element={<Sports/>}/>
     <Route path='Allproducts' element={<Allproducts/>}/>
-    <Route path='/Admin' element={login==true  ?<Admin/>:<Login/>}/>
+    <Route path='/Admin' element={login===true  ?<Admin/>:<Login/>}/>
 
     <Route element={<Admin/>}>
     <Route path='/Viewproduct' element={<Viewproduct/>}/>

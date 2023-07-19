@@ -6,7 +6,7 @@ import './Homestyle.css'
 
 const Admin = () => {
     const navProduct=useNavigate()
-    const{data,setLogin}=useContext(Mycontext)
+    const{setLogin}=useContext(Mycontext)
     const logout=()=>{
       setLogin(false)
       navProduct("/")

@@ -26,7 +26,7 @@ const Adminsport = () => {
         <td>{x.name}</td>
         <td>{x.type}</td>
         <td>{x.brand}</td>
-       <td> <img width={100} height={90} src={x.src}/></td>
+       <td> <img width={100} height={90} src={x.src} alt='shoe'/></td>
         <td>{x.des}</td>
         <td>{x.prize}</td>
         <td>{x.offerPize}</td>

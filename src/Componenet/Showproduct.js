@@ -27,7 +27,7 @@ const nav=useNavigate()
     const id=e.target.id
     console.log(login);
 // console.log("length:",login.length);
-if(login==true)
+if(login===true)
 {
   if (PID.includes(id)) {
     alert('Product is already added');
