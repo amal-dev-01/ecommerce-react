@@ -25,7 +25,7 @@ function Women() {
   const Addtocart=(e)=>{
     const id=e.target.id
     console.log(login);
-// console.log("length:",login.length);
+
 if(login.length>0)
 {
   if (PID.includes(id)) {
@@ -34,23 +34,16 @@ if(login.length>0)
     setCart((cart) => [...cart, { productId: id }]);
     setCount(count+1)
     alert('Sucessfully Added to cart')
-    // console.log(cart);
+    
   }
 
 }
 else{
   alert("plz Login")
-  // navPro('/Registration')
+ 
 }
-    
-
-   
    
   };
-
- 
-  
-
   return (
 
     <div>
@@ -81,9 +74,7 @@ else{
               />
               <Card.Body>
                 <div className="d-flex justify-content-between">
-                  <p className="small">
-                    <a href="#!" className="text-muted"></a>
-                  </p>
+                  
                   <p className="small text-danger">
                     <s>${product.prize}</s>
                   </p>

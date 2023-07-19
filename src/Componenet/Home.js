@@ -15,7 +15,7 @@ const Home = () => {
   const navMen = useNavigate()
   const { addproduct} = useContext(Mycontext);
   const filteredProducts = addproduct.filter(
-    (product) => product.id%2==0
+    (product) => product.id%2 === 0
   );
   const passid=(e)=>{
     const id=e.target.id

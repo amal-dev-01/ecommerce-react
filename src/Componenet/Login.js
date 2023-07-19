@@ -23,7 +23,7 @@ const Login = () => {
     //  console.log(Email1);
     //  console.log(Password1);
 
-    if (Email1 == 'admin@gmail.com' && Password1 == 'admin') {
+    if (Email1 === 'admin@gmail.com' && Password1 === 'admin') {
       setLogin(true)
       nav('/Admin')
       

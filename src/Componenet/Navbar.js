@@ -52,7 +52,7 @@ const NavbarMain = () => {
      <img src="https://img.icons8.com/?size=512&id=98957&format=png" width={25} alt='Loginout'/></Dropdown.Toggle>
       <Dropdown.Menu>
       {
-      login == true?
+      login === true?
     <Nav.Link  onClick={logout}><Nav.Link> {user}</Nav.Link><img src="https://img.icons8.com/?size=512&id=26211&format=png" width={25} alt='Loginout'/> Logout</Nav.Link>:
     <Nav.Link  onClick={()=>navHome('/Login')}><img src="https://img.icons8.com/?size=512&id=98957&format=png" width={25} alt='Login'/>Login</Nav.Link>
     }
