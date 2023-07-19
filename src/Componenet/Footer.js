@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import {  FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+// import {  FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 

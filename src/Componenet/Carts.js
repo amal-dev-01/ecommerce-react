@@ -2,7 +2,7 @@ import React, { useContext} from 'react';
 import { Mycontext } from './Context';
 import { Button, Card,Col ,Image,Row} from 'react-bootstrap';
 import Quantity from './Quantity';
-import { useNavigate } from 'react-router-dom';
+
 
 const Carts = () => {
 
