@@ -190,7 +190,7 @@ const Total=total
                   />
                 </div>
               </div>
-
+              
               <button type="button" className="btn btn-lg btn-block">
                 Continue to checkout
               </button>

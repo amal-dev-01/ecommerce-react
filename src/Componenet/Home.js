@@ -134,9 +134,7 @@ const Home = () => {
                     Brands: <span className="fw-bold">{product.brand}</span>
                   </p>
                 </div>
-                {/* <Button variant="primary" id={product.id} onClick={Addtocart}>
-                  Add To Cart
-                </Button> */}
+              
               </Card.Body>
             </Card>
           </Col>

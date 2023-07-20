@@ -2,10 +2,11 @@ import React, { useContext} from 'react';
 import { Mycontext } from './Context';
 import { Button, Card,Col ,Image,Row} from 'react-bootstrap';
 import Quantity from './Quantity';
+import { useNavigate } from 'react-router-dom';
 
 
 const Carts = () => {
-
+ const nav=useNavigate()
   const { cart, addproduct, setCart ,data,setCount,count} = useContext(Mycontext);
 
   const Removecard = (e) => {
@@ -33,6 +34,7 @@ let sum=0
      {sum=sum+(product.offerPize*product.qty)
       return sum
    }
+ ,nav("/")
    );
 
 
@@ -93,10 +95,6 @@ let sum=0
                 <h5 className="mb-0">Summary</h5>
               </Card.Header>
               <Card.Body>
-              {/* <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-              Total Products:
-                    <span>{count}</span>
-                  </li> */}
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                     <div>
@@ -111,9 +109,9 @@ let sum=0
                   </li>
                 </ul>
 
-                <Button block size="lg" onClick={filteredProducts}>
-                  Go to checkout
-                </Button>
+               {/* <Button block size="lg" onClick={filteredProducts}> Go to checkout </Button> */}
+                 <button onClick={filteredProducts}>Go to checkout</button>
+               
               </Card.Body>
             </Card>
           </Col>

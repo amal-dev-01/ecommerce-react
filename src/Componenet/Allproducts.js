@@ -3,6 +3,7 @@ import { Mycontext } from './Context'
 import { Col, Container, Row, Card,Button, Navbar } from "react-bootstrap";
 import './Homestyle.css'
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const Allproducts = () => {
     const {addproduct,cart,setCart,data,setCount,count,}=useContext(Mycontext)
@@ -92,6 +93,7 @@ const Allproducts = () => {
         ))}
       </Row>
     </Container>
+    <Footer/>
   </div>
   
   )

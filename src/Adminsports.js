@@ -31,8 +31,7 @@ const Adminsports = () => {
         <td>{x.des}</td>
         <td>{x.prize}</td>
         <td>{x.offerPize}</td>
-        {/* <td><Button id={x.id} variant='danger' onClick={remove}>Delete</Button></td>
-        <td><Button id={x.id} onClick={edit}>Edit</Button></td> */}
+  
         </tr>
         )}
         </table>

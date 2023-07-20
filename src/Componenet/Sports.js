@@ -1,14 +1,14 @@
 import { useContext } from 'react';
-import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
+
 import { Col, Container, Row, Card } from "react-bootstrap";
 import { Mycontext } from './Context';
 import './Homestyle.css'
 import { useNavigate } from 'react-router-dom';
 import NavbarMain from './Navbar'
+import Footer from './Footer';
 
 function Sports() {
-  const { addproduct,cart,setCart,count,setCount,data} = useContext(Mycontext);
+  const { addproduct} = useContext(Mycontext);
   const filteredProducts = addproduct.filter(
     (product) => product.type.toLowerCase() === 'sports'
   );
@@ -18,35 +18,8 @@ function Sports() {
     // console.log(id);
     navPro(`/Showproduct/${id}`)
   }
-  const PID=cart.map((i)=>i.productId)
-  const login = data.map((item) => item.email);
+ 
 
-
-  const Addtocart=(e)=>{
-    const id=e.target.id
-    console.log(login);
-// console.log("length:",login.length);
-if(login.length>0)
-{
-  if (PID.includes(id)) {
-    alert('Product is already added');
-  } else {
-    setCart((cart) => [...cart, { productId: id }]);
-    setCount(count+1)
-    alert('Sucessfully Added to cart')
-    // console.log(cart);
-  }
-
-}
-else{
-  alert("plz Login")
-//   navPro('/Registration')
-}
-    
-
-   
-   
-  };
 
  
   
@@ -100,15 +73,14 @@ else{
                     Brands: <span className="fw-bold">{product.brand}</span>
                   </p>
                 </div>
-                <Button variant="primary" id={product.id} onClick={Addtocart}>
-                  Add To Cart
-                </Button>
+               
               </Card.Body>
             </Card>
           </Col>
         ))}
       </Row>
     </Container>
+    <Footer/>
   </div>
   
  

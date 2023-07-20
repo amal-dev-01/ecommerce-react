@@ -32,7 +32,8 @@ if(login===true)
   if (PID.includes(id)) {
     alert('Product is already added');
   } else {
-    setCart((cart) => [...cart, { productId: id }])&&setCount(count+1)
+    setCart((cart) => [...cart, { productId: id }])
+    setCount(count+1)
     // setCount(count+1)
     alert('Sucessfully Added to cart')
     // console.log(cart);

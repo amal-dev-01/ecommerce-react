@@ -165,7 +165,7 @@ name:"Women's Nike Legend  Shoes Breathable ",
 name:"Women's Skechers Shoes Rockport",
     type:"women",
     brand:'Skechers',
-    src:"https://i8.amplience.net/s/scvl/113312_232621_SET/1?fmt=auto&$webPdpProduct$" ,
+    src:"https://i8.amplience.net/s/scvl/113312_232621_SET/1?fmt=auto" ,
     des:" Absorbent fabric lined insoleSculpted foam midsole and durable rubber outsole with traction design branding detail",
     prize:"4800",
     offerPize:4480, qty:1
