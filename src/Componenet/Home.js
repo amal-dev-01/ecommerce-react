@@ -60,7 +60,7 @@ const Home = () => {
         <div className='row' style={{ flexWrap: 'wrap'  }}>
           <div className='row' style={{padding:"5vw"}}>
             <Card style={{ width: '25rem', margin: '0 10px',padding:"2vh" }} className='card-with-hover' onClick={()=>navMen('/Men')}>
-              <Card.Img variant="top" src="https://img.freepik.com/free-photo/cool-guy-good-mood-posing-blue-background-jumping_197531-26875.jpg?w=1060&t=st=1689573478~exp=1689574078~hmac=046340669b71110d03b678152b38379f498f1b32670228fa6be50f588b968f1a" fluid />
+              <Card.Img variant="top" src="https://img.freepik.com/free-photo/handsome-guy-black-pants-beige-jacket-jumps-orange-background_197531-26938.jpg?w=1060&t=st=1689847595~exp=1689848195~hmac=e764c75a329256f73c74d73877247c7dd2ef30f1c8bab3d08a4b08577fa13b08" fluid />
               <Card.Body>
                 <Card.Title>Men's Fashion</Card.Title>
                
@@ -73,7 +73,7 @@ const Home = () => {
               </Card.Body>
             </Card>
             <Card style={{ width: '25rem', margin: '0 10px' ,padding:"2vh"  }} className='card-with-hover' onClick={()=>navMen('/Sports')}>
-              <Card.Img variant="top" src="https://img.freepik.com/free-photo/portrat-caucasian-professional-male-athlete-runner-training-isolated-black_155003-42226.jpg?w=1060&t=st=1689596195~exp=1689596795~hmac=60f0a4e7525811bbe632d5fc120b1b565cb51e89173a14678541c6bb35e0a6aa" />
+              <Card.Img variant="top" src="https://img.freepik.com/free-photo/portrat-caucasian-professional-male-athlete-runner-training-isolated-black_155003-42226.jpg?w=1060&t=st=1689847671~exp=1689848271~hmac=bea7975680a63d52add8032fc2de955304c604c45c3fd9627ff934854dcf609e" />
               <Card.Body>
                 <Card.Title>Sports</Card.Title>
              
