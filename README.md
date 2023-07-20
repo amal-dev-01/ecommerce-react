@@ -1,1 +1,1 @@
-#output:https://ecommerce-shoe-hub.netlify.app/
+#output:https://shoe-ecommerce-react.netlify.app/
